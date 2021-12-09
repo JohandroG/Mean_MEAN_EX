@@ -1,0 +1,56 @@
+<form (submit)="register($event)">
+    <h1>Register as..</h1>
+
+    <h3 class="name">{{newUser.firstname}} {{newUser.lastname}}</h3>
+
+    <div class="form">
+        <div>
+            <label for="firstname">
+                First Name:
+            </label>
+            <input type="text" [(ngModel)]="newUser.firstname" name="firstname"/>
+            <div class="errors">{{errors.firstnamelen}}</div>
+        </div>
+        
+        <div>
+            <label for="lastname">
+                Last Name:
+            </label>
+            <input type="text" [(ngModel)]="newUser.lastname" name="lastname"/>
+            <div class="errors">{{errors.lastnamelen}}</div>
+        </div>
+        
+        
+        <div>
+            <label for="email">
+                Username:
+            </label>
+            <input type="text" [(ngModel)]="newUser.username" name="username"/>
+            <div class="errors">{{errors.usernameexits}}</div>
+        </div>
+        
+        <div>
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" [(ngModel)]="newUser.password" name="password"/>
+            <div class="errors">{{errors.passlen}}</div>
+        </div>
+        
+        <div>
+            <label for="confpassword">
+                Confirm Password:
+            </label>
+            <input type="password" [(ngModel)]="confpassword" name="confpassword"/>
+            <div class="errors">{{errors.confpassmjs}}</div>
+            <div class="errors">{{errors.empty}}</div>
+        </div>
+        
+        <div>
+            <button class="btt" type="submit">
+                Register
+            </button>
+        </div>
+    </div>
+
+</form>

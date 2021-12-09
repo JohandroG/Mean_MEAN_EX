@@ -1,0 +1,45 @@
+<nav>
+    <h1>Welcome {{firstname}} {{lastname}}</h1>
+    <a href="/create">Create a New Poll</a>
+    <button type="button" (click)="logout()">
+        Logout
+    </button>
+    
+</nav>
+
+<input type="text" placeholder="Search"/>
+<!-- this is only for ilustration doesn't work -->
+
+<div class="body">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Survey Question</td>
+                    <td>Date Posted</td>
+                    <td>action</td>
+                </tr>
+            </thead>
+            <tbody *ngFor="let poll of allpolls">
+                <tr>
+                    <td>{{poll.creatorname}}</td>
+                    <td>
+                        <a href="/poll/{{poll._id}}">{{poll.question}}</a>
+                    </td>
+                    <td>{{poll.created}}</td>
+                    <td *ngIf="id == poll.creator">
+                        <form (submit)="deletePoll($event)">
+                            <input type="hidden" value="{{poll._id}}" id="poll_id">
+                            <button type="submit">
+                                Remove
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+

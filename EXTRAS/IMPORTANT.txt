@@ -1,0 +1,19 @@
+Hello teacher everything is suppose to work but just in case here you have some annotations
+
+1.
+In database file in server/config the connection is made via (127.0.0.1) instead of (locahost)
+for some reasons my computer only accept this direction so, if mongo doesn't not works for you
+you can change it to localhost as normal
+
+
+2.
+The database name is ("usersypolls") only creating it, it should work
+but you coul see the collections in the other file of this folder
+
+3.
+I didn't change the date format because of time, but it works perfectly
+
+4.
+ If you need any othe information or something is not working just let me know
+ From my side everything is working perfectly i hope that from yours too
+

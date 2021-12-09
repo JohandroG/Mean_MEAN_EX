@@ -1,0 +1,68 @@
+<nav>
+    <h1>Welcome to Voting</h1>
+    <a href="/home">Go Back</a>
+</nav>
+
+<h1>{{poll.question}}</h1>
+
+<h4>Click the vote button to choose one</h4>
+
+<table>
+    <thead>
+        <tr>
+            <td>Option</td>
+            <td>Current Count of Votes</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>{{poll.option1}}</td>
+            <td>
+                {{poll.vote1}}
+            </td>
+            <td>
+                <button type="button" (click) = "increment1()">
+                    Vote
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>{{poll.option2}}</td>
+            <td>
+                {{poll.vote2}}
+            </td>
+            <td>
+                <button type="button" (click) = "increment2()">
+                    Vote
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>{{poll.option3}}</td>
+            <td>
+                {{poll.vote3}}
+            </td>
+            <td>
+                <button type="button" (click) = "increment3()">
+                    Vote
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>{{poll.option4}}</td>
+            <td>
+                {{poll.vote4}}
+            </td>
+            <td>
+                <button type="button" (click) = "increment4()">
+                    Vote
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+
+<form (submit)="loginProcess($event)">
+
+    <h1>Login as..</h1>
+
+    <h4 class="name">{{loginInfo.email}}</h4>
+    <div class="form">
+        <div>
+            <label for="email">
+                Username:
+            </label>
+            <input type="text" [(ngModel)]="loginInfo.username" name="email"/>
+        </div>
+        <div>
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" [(ngModel)]="loginInfo.password" name="password"/>
+            <div class="errors">{{errors.empty}}</div>
+            <div class="errors">{{errors.others}}</div>
+        </div>
+        
+        <div>
+            <button class="btt" type="submit">
+                Login
+            </button>
+        </div>
+    </div>
+
+</form>

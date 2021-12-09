@@ -1,0 +1,39 @@
+<nav>
+    <h1>Welcome {{firstname}} {{lastname}}</h1>
+    <a href="/home">Cancel</a>
+</nav>
+
+<h2>Put the question and options here</h2>
+<div class="errors">{{errors.empty}}</div>
+
+<form (submit) = "createnewPoll($event)">
+    <div>
+        <label>Question:</label>
+        <input class="ques" type="text" name="question" [(ngModel)]="newpoll.question">
+        <div class="errors">{{errors.queslen}}</div>
+        <div class="errors">{{errors.oplen}}</div>
+    </div>
+    <div>
+        <label>Option 1:</label>
+        <input type="text" name="option1" [(ngModel)]="newpoll.option1">
+        
+    </div>
+    <div>
+        <label>Option 2:</label>
+        <input type="text" name="option2" [(ngModel)]="newpoll.option2">
+    </div>
+    <div>
+        <label>Option 3:</label>
+        <input type="text" name="option3" [(ngModel)]="newpoll.option3">
+    </div>
+    <div>
+        <label>Option 4:</label>
+        <input type="text" name="option4" [(ngModel)]="newpoll.option4">
+    </div>
+    
+    <div>
+        <button type="submit">
+            Create Poll
+        </button>
+    </div>
+</form>

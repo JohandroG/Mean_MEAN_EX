@@ -1,0 +1,28 @@
+.logreg{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+
+nav{
+    background-color: rgb(8, 8, 92);
+    color: white;
+    padding: 5px 30px;
+    font-size: 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    margin: 0;
+}
